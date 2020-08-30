@@ -11,6 +11,24 @@ public class Book {
     private String authorName;
     private String ISBNNumber;
 
+    public Book() {
+        bookName = "JavaFX Rich Client Programming on the NetBeans Platform";
+        authorName = "Gail Anderson";
+        ISBNNumber = "978-0321927712";
+    }
+
+    public Book(String bookName, String authorName, String ISBNNumber) {
+        this.bookName = bookName;
+        this.authorName = authorName;
+        this.ISBNNumber = ISBNNumber;
+    }
+
+    public Book(String authorName) {
+        this.bookName = "Java EE and HTML5 Enterprise Application Development";
+        this.authorName = authorName;
+        this.ISBNNumber = "978-0071823098";
+    }
+
     public String getBookName() {
         return bookName;
     }
