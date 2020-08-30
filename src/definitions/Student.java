@@ -6,6 +6,8 @@
  * */
 package definitions;
 
+import java.util.Arrays;
+
 public class Student {
     private String studentName;
     private long studentRollNumber;
@@ -59,5 +61,15 @@ public class Student {
 
     public void setNamesOfBooksIssued(Book[] namesOfBooksIssued) {
         this.namesOfBooksIssued = namesOfBooksIssued;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "studentName='" + studentName + '\'' +
+                ", studentRollNumber=" + studentRollNumber +
+                ", numberOfBooksIssued=" + numberOfBooksIssued +
+                ", namesOfBooksIssued=" + Arrays.toString(namesOfBooksIssued) +
+                '}';
     }
 }
