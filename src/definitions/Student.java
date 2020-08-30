@@ -15,13 +15,13 @@ public class Student {
     private int numberOfBooksIssued;
     private Book[] namesOfBooksIssued;
 
-    public Student() {
-        studentName = "garvit gupta";
-        studentRollNumber = 191500222;
+    public Student(String studentName, long studentRollNumber, int numberOfBooksIssuedByStudent) {
+        this.studentName = "garvit gupta";
+        this.studentRollNumber = 191500222;
         numberOfBooksIssued = 5;
         this.namesOfBooksIssued = new Book[10];
         for (int index = 0; index < namesOfBooksIssued.length; index++) {
-            namesOfBooksIssued[index] = new Book();
+            namesOfBooksIssued[index] = new Book("book" + (index + 1) + "");
         }
     }
 
@@ -62,6 +62,12 @@ public class Student {
 
     public void setNamesOfBooksIssued(Book[] namesOfBooksIssued) {
         this.namesOfBooksIssued = namesOfBooksIssued;
+    }
+
+    public void printNamesOfBooksIssued() {
+        for (Book bookName : namesOfBooksIssued) {
+            System.out.println(bookName);
+        }
     }
 
     @Override

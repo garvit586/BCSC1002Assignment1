@@ -25,9 +25,9 @@ public class Book {
         this.ISBNNumber = ISBNNumber;
     }
 
-    public Book(String authorName) {
-        this.bookName = "Java EE and HTML5 Enterprise Application Development";
-        this.authorName = authorName;
+    public Book(String bookName) {
+        this.bookName = bookName;
+        this.authorName = "john brock";
         this.ISBNNumber = "978-0071823098";
     }
 
